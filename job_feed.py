@@ -8,6 +8,8 @@ def pull_job_links_from_feed(feed_url):
     if feed.status == 200:
         for entry in feed.entries:
             print(entry.link)
+    else:
+        print("Error while attempting to grab feed")
 
 if __name__ == "__main__":
     pull_job_links_from_feed(rss_url)
